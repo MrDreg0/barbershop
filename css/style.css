@@ -43,6 +43,13 @@ a {
 	line-height: 20px;
 }
 
+.header-navigation-link:hover,
+.user-navigation-link:hover,
+.header-navigation-link:focus,
+.user-navigation-link:focus {
+	background-color: #242424;
+}
+
 .header-login {
 	padding: 0;
 	margin: 0;
@@ -52,6 +59,46 @@ a {
 	color: #ffffff;
 	font-size: 16px;
 	line-height: 20px;
+}
+
+.popup-login {
+	background-color: #ffffff;
+	background-image: url("../img/jpg/block-bg.jpg");
+	background-repeat: repeat;
+	background-position: 0 0;
+	box-shadow: 0 30px 0 50px rgba(0, 0, 0, 0.75);
+	color: #000000;
+}
+
+.popup-login-title {
+	font-size: 30px;
+}
+
+.popup-login-form input {
+	font: inherit;
+	background-color: #f9f6f3;
+	border: 2px solid #000000;
+	text-transform: uppercase;
+}
+
+.popup-login-form input:focus {
+	border-color: #663d15;
+	outline: none;
+}
+
+.login-popup-checkbox_label:hover,
+.login-popup-checkbox_label:focus {
+	color: #663d15;
+}
+
+.popup-login-forgot_password {
+	text-decoration: underline;
+	color: #000000;
+}
+
+.popup-login-forgot_password:hover,
+.popup-login-forgot_password:focus {
+	text-decoration: none;
 }
 
 	/*	Конец шапки	*/
@@ -65,8 +112,17 @@ a {
 	background-color: #000000;
 	border: none;
 	text-transform: uppercase;
-	font-size: 14px;
+	text-align: center;
+	vertical-align: middle;
+	font: inherit;
 	line-height: 14px;
+	cursor: pointer;
+}
+
+.main-button:hover,
+.main-button:focus,
+.main-button:active {
+background-color: #663d15;
 }
 
 .main-block h3 {
@@ -90,6 +146,9 @@ a {
 
 .main-wrapper {
 	background-color: #ffffff;
+	background-image: url("../img/jpg/block-bg.jpg");
+	background-position: 0 0;
+	background-repeat: repeat;
 	color: #000000;
 	padding: 50px 80px;
 }
@@ -108,5 +167,76 @@ a {
 	text-transform: none;
 }
 
+.main-gallery-item {
+	background-color: #cccccc;
+	border: 7px solid #ffffff;
+}
+
+.main-appointment-form input {
+	font: inherit;
+	background-color: transparent;
+	border: 2px solid #000000;
+}
+
+.main-appointment-form input:focus {
+	border-color: #663d15;
+	outline: none;
+}
+
+.main-footer {
+	color: #ffffff;
+	background-color: #212121;
+	background-image: url("../img/jpg/footer-bg.jpg");
+	background-repeat: repeat;
+	background-position: 0 0;
+}
+
+.footer-contacts a {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+.footer-contacts a:hover,
+.footer-contacts a:focus {
+	text-decoration: none;
+}
+
+.footer-social {
+	text-align: center;
+}
+
+.footer-social-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.footer-social-link {
+	color: #ffffff;
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+	color: #000000;
+	background-color: #ffffff;
+}
+
+.footer-copyrights {
+	text-align: center;
+}
+
+.footer-copytights-link:hover,
+.footer-copytights-link:focus {
+	color: #000000;
+	background-color: #ffffff;
+}
+
+
+
+
+.popup-map {
+	border: 7px solid #ffffff;
+	background-color: #f1efe8;
+}
 
 	/*	Конец основного блока	*/
