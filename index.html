@@ -9,55 +9,59 @@
 	<body>
 		<!-- Начало шапки -->
 		<header class="main-header">
-			<nav class="header-navigation">
-				<ul class="header-navigation-list">
-					<li class="header-navigation-item">
-						<a href="#" class="header-navigation-link">Информация</a>
-					</li>
-					<li class="header-navigation-item">
-						<a href="#" class="header-navigation-link">Новости</a>
-					</li>
-					<li class="header-navigation-item">
-						<a href="#" class="header-navigation-link">Прайс-лист</a>
-					</li>
-					<li class="header-navigation-item">
-						<a href="#" class="header-navigation-link">Магазин</a>
-					</li>
-					<li class="header-navigation-item">
-						<a href="#" class="header-navigation-link">Контакты</a>
-					</li>
-				</ul>
-			</nav>
-			<ul class="user-navigation-list">
-				<li class="user-navigation-item">
-					<button class="header-login">Вход</button>
+			<div class="main-header-wrapper">
+				<div class="container">
+					<nav class="header-navigation">
+						<ul class="header-navigation-list">
+							<li class="header-navigation-item">
+								<a href="#" class="header-navigation-link">Информация</a>
+							</li>
+							<li class="header-navigation-item">
+								<a href="#" class="header-navigation-link">Новости</a>
+							</li>
+							<li class="header-navigation-item">
+								<a href="#" class="header-navigation-link">Прайс-лист</a>
+							</li>
+							<li class="header-navigation-item">
+								<a href="#" class="header-navigation-link">Магазин</a>
+							</li>
+							<li class="header-navigation-item">
+								<a href="#" class="header-navigation-link">Контакты</a>
+							</li>
+						</ul>
+					</nav>
+					<ul class="user-navigation-list">
+						<li class="user-navigation-item">
+							<a href="login.html" class="user-login-link popup-link">Вход</a>
 
-					<!-- Начало блока логина -->
-					<section class="popup-login">
-						<h2 class="popup-login-title">Личный кабинет</h2>
-						<p>Введите пожалуйста свой логин и пароль</p>
-						<form action="https://echo.htmlacademy.ru" method="post" class="popup-login-form">
-							<input type="login" name="login" placeholder="Логин">
-							<input type="password" name="password" placeholder="Пароль">
-							<label class="login-popup-checkbox_label" >
-								Запомните меня
-								<input type="checkbox" name="forgot-me" checked>
-							</label>
-							<a href="#" class="popup-login-forgot_password">Я забыл пароль!</a>
-							<button type="submit" class="main-button">Войти</button>
-						</form>
-						<button class="close-popup">Закрыть</button>
-					</section>
-					<!-- Конец блока логина -->
+							<!-- Начало блока логина -->
+							<section class="popup popup-login">
+								<h2 class="popup-login-title">Личный кабинет</h2>
+								<p>Введите пожалуйста свой логин и пароль</p>
+								<form action="https://echo.htmlacademy.ru" method="post" class="popup-login-form">
+									<input type="login" name="login" placeholder="Логин">
+									<input type="password" name="password" placeholder="Пароль">
+									<input type="checkbox" id="forgot-me" name="forgot-me" class='visually-hidden' checked>
+									<div class="login-form-wrapper">
+										<label for="forgot-me" class="login-popup-checkbox_label" >Запомните меня</label>
+										<a href="#" class="popup-login-forgot_password">Я забыл пароль!</a>
+									</div>
+									<button type="submit" class="login-form-submit main-button">Войти</button>
+								</form>
+								<button class="close-popup">Закрыть</button>
+							</section>
+							<!-- Конец блока логина -->
 
-				</li>
-			</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
 		</header>
 		<!-- Конец шапки -->
 
 
 		<!-- Начало основного блока -->
-		<main class="main-block">
+		<main class="main-block container">
 			<h1 class="visually-hidden">Барбершоп "Бородинский"</h1>
 			<img src="img/png/index-logo.png" width="371" height="155" alt="Barbershop Borodinski" class="main-logo">
 			<section class="main-features">
@@ -69,7 +73,7 @@
 					</li>
 					<li class="features-item">
 						<h3 class="features-item-title">Круто</h3>
-						<p class="features-item-text">Забудьте, как вы стриглись раньше. Мы сделаем из вас звезду футбола или кино! Во всяком случае внешне.</p>
+						<p class="features-item-text">Забудьте, как вы стриглись раньше.<br> Мы сделаем из вас звезду футбола или кино! Во всяком случае внешне.</p>
 					</li>
 					<li class="features-item">
 						<h3 class="features-item-title">Дорого</h3>
@@ -99,8 +103,8 @@
 							<img src="img/jpg/gallery-item-1.jpg" width="286" height="164" 	alt="Интерьер">
 						</a>
 					</div>
-					<button class="main-gallery-button main-button">Назад</button>
-					<button class="main-gallery-button main-button">Вперед</button>
+					<button class="main-gallery-button_prev main-button" disabled>Назад</button>
+					<button class="main-gallery-button_next main-button">Вперед</button>
 				</section>
 			</div>
 			<div class="main-wrapper">
@@ -124,22 +128,22 @@
 					<p>Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
 					<form action="https://echo.htmlacademy.ru" method="post" class="main-appointment-form">
 						<label>
-							Дата
+							<span>Дата</span>
 							<input type="text" name="date" placeholder="08.10.2017">
 						</label>
 						<label>
-							Время
+							<span>Время</span>
 							<input type="text" name="time" placeholder="10:00">
 						</label>
 						<label>
-							Ваше имя
+							<span>Ваше имя</span>
 							<input type="text" name="name" placeholder="Борода">
 						</label>
 						<label>
-							Телефон
+							<span>Телефон</span>
 							<input type="tel" name="phone" placeholder="+7 123 456-78-90">
 						</label>
-						<button type="submit" class="main-button">Отправить</button>
+						<button type="submit" class="main-appointment-button main-button">Отправить</button>
 					</form>
 				</section>
 			</div>
@@ -149,35 +153,39 @@
 
 		<!-- Начало подвала -->
 		<footer class="main-footer">
-			<p class="footer-contacts">
-				Барбершоп «Бородинский»<br>
-        Адрес: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
-        <a href="map.html">Как нас найти?</a><br>
-        Телефон: +7 (495) 666-02-66
-			</p>
-			<div class="footer-social">
-				<h3>Давайте дружить!</h3>
-				<ul class="footer-social-list">
-					<li class="footer-social-item">
-						<a href="#" class="footer-social-link main-button">Вконтакте</a>
-					</li>
-					<li class="footer-social-item">
-						<a href="#" class="footer-social-link main-button">Facebook</a>
-					</li>
-					<li class="footer-social-item">
-						<a href="#" class="footer-social-link main-button">Instagram</a>
-					</li>
-				</ul>
-			</div>
-			<div class="footer-copyrights">
-				<h3>Разработано:</h3>
-				<a href="https://htmlacademy.ru/" class="footer-copytights-link main-button">HTML Academy</a>
+			<div class="main-footer-wrapper">
+				<div class="container">
+					<p class="footer-contacts">
+						Барбершоп «Бородинский»<br>
+		        Адрес: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
+		        <a href="map.html">Как нас найти?</a><br>
+		        Телефон: +7 (495) 666-02-66
+					</p>
+					<div class="footer-social">
+						<h3>Давайте дружить!</h3>
+						<ul class="footer-social-list">
+							<li class="footer-social-item">
+								<a href="#" class="footer-social-link social-vk main-button">Вконтакте</a>
+							</li>
+							<li class="footer-social-item">
+								<a href="#" class="footer-social-link social-fb main-button">Facebook</a>
+							</li>
+							<li class="footer-social-item">
+								<a href="#" class="footer-social-link social-instagram main-button">Instagram</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer-copyrights">
+						<h3>Разработано:</h3>
+						<a href="https://htmlacademy.ru/" class="footer-copytights-link main-button">HTML Academy</a>
+					</div>
+				</div>
 			</div>
 		</footer>
 		<!-- Конец подвала -->
 
 		<!-- Начало блока карты -->
-		<section class="popup-map">
+		<section class="popup popup-map">
 			<h2 class="visually-hidden">Карта</h2>
 			<div class="popup-map-block">
 				<img src="img/jpg/map.jpg" alt="Карта" width="766" height="560">
@@ -185,6 +193,8 @@
 			<button class="close-popup">Закрыть</button>
 		</section>
 		<!-- Конец блока карты -->
-		
+		<div class="block-overlay"></div>
+
+	<script type="text/javascript" src="js/script.js"></script>
 	</body>
 </html>
