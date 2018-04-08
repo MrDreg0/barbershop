@@ -72,7 +72,7 @@ a {
 
 .header-navigation-list {
 	display: flex;
-	width: 620px;
+	width: 720px;
 }
 
 .header-navigation-link {
@@ -84,11 +84,15 @@ a {
 	line-height: 20px;
 }
 
-.header-navigation-link:hover,
+.header-navigation-link:not(.inner-page-logo):hover,
 .user-login-link:hover,
-.header-navigation-link:focus,
+.header-navigation-link:not(.inner-page-logo):focus,
 .user-login-link:focus {
 	background-color: #242424;
+}
+
+.inner-page-logo {
+	padding: 22px 20px;
 }
 
 .user-navigation-list {
@@ -639,3 +643,17 @@ background-color: #663d15;
 }
 
 	/*	Конец основного блока	*/
+
+
+	/*	Начало основного блок галереи */
+	
+.catalog-block {
+	color: #000000;
+	background-image: url("../img/jpg/block-bg.jpg");
+	background-position: 0 0;
+	background-repeat: repeat;
+}
+
+.catalog-gallery-wrapper {
+	display: flex;
+}
