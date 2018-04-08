@@ -30,8 +30,8 @@ closeMap.addEventListener('click', function(evt) {
 	overlay.classList.remove("show-overlay");
 })
 
-overlay.addEventListener('click', function(evt) {
-	evt.preventDefault();
+overlay.addEventListener('click', function() {
+	popup.classList.remove('show-popup');
 	popupMap.classList.remove("show-popup");
 	overlay.classList.remove('show-overlay');
 });
