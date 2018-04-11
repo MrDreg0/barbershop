@@ -5,15 +5,17 @@ body {
 	text-transform: uppercase;
 	color: #ffffff;
 	font-weight: 700;
-
 	background-color: #000000;
-	background-image: url("../img/jpg/index-bg-image.jpg");
-	background-repeat: no-repeat;
-	background-position: center 40px;
 }
 
 a {
 	text-decoration: none;
+}
+
+.index-body {
+	background-image: url("../img/jpg/index-bg-image.jpg");
+	background-repeat: no-repeat;
+	background-position: center 40px;
 }
 
 .visually-hidden {
@@ -61,8 +63,11 @@ a {
 
 .main-header-wrapper {
 	width: 100%;
-	margin-bottom: 60px;
 	background-color: #000000;
+}
+
+.index-body .main-header-wrapper {
+	margin-bottom: 60px;
 }
 
 .main-header-wrapper .container {
@@ -75,24 +80,48 @@ a {
 	width: 720px;
 }
 
-.header-navigation-link {
-	display: block;
-	vertical-align: middle;
+.index-body .header-navigation-item {
 	padding: 26px 20px;
+}
+
+.header-navigation-item {
+	padding: 24px 20px 20px;
+}
+
+.header-navigation-link,
+.header-navigation-item {
 	color: #ffffff;
 	font-size: 16px;
 	line-height: 20px;
 }
 
-.header-navigation-link:not(.inner-page-logo):hover,
+.header-navigation-link:hover,
+.header-navigation-item:hover,
 .user-login-link:hover,
-.header-navigation-link:not(.inner-page-logo):focus,
+.header-navigation-link:focus,
+.header-navigation-item:focus,
 .user-login-link:focus {
 	background-color: #242424;
 }
 
-.inner-page-logo {
-	padding: 22px 20px;
+.on_page:hover,
+.on_page:focus {
+	background-color: #000000;
+	cursor: default;
+}
+
+.on_page-mark {
+	position: relative;
+}
+
+.on_page-mark:after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 4px;
+	background-color: #ffffff;
+	bottom: -28px;
+	left: 0;
 }
 
 .user-navigation-list {
@@ -475,7 +504,7 @@ background-color: #663d15;
 	width: 100%;
 }
 
-.main-footer {
+.index-footer {
 	margin-top: 65px;
 	color: #ffffff;
 }
@@ -645,15 +674,339 @@ background-color: #663d15;
 	/*	Конец основного блока	*/
 
 
-	/*	Начало основного блок галереи */
-	
+	/*	Начало основного блок товара "Набор для путешествий" */
+
 .catalog-block {
 	color: #000000;
+	width: 100%;
 	background-image: url("../img/jpg/block-bg.jpg");
 	background-position: 0 0;
 	background-repeat: repeat;
 }
 
+.catalog-wrapper {
+	padding-top: 60px;
+	padding-bottom: 42px;
+}
+
 .catalog-gallery-wrapper {
 	display: flex;
+	justify-content: space-between;
 }
+
+.catalog-block-title {
+	margin: 0;
+	margin-bottom: 23px;
+	padding: 0;
+	letter-spacing: 0.95px;
+}
+
+.catalog-breadcrumbs-list {
+	list-style: none;
+	margin: 0;
+	margin-bottom: 52px;
+	padding: 0;
+}
+
+.catalog-breadcrumbs-item {
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+}
+
+.catalog-breadcrumbs-item:not(:last-child) {
+	padding-right: 41px;
+}
+
+.catalog-breadcrumbs-item:not(:last-child)::after {
+	content: "";
+	position: absolute;	
+	width: 8px;
+	height: 8px;
+	background-color: #000000;
+	right: 18px;
+	top: 8px;
+	transform: rotate(45deg);
+}
+
+.catalog-breadcrumbs-item:last-child {
+	color: #aba9a7;
+	cursor: default;
+}
+
+.catalog-breadcrumbs-link {
+	color: #000000;
+}
+
+.catalog-block-gallery {
+	width: 460px;
+}
+
+.catalog-block-gallery img {
+	box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-main-image {
+	margin-bottom: 15px;
+}
+
+.catalog-gallery-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	justify-content: space-between;
+}
+
+.catalog-item-information {
+	width: 390px;
+	padding-top: 20px;
+}
+
+.catalog-available-wrapper {
+	display: flex;
+	justify-content: space-between;
+	padding-right: 12px;
+	margin-bottom: 29px;
+}
+
+.catalog-item-description {
+	padding: 0;
+	margin: 0;
+	margin-bottom: 36px;
+}
+
+.catalog-item-price_wrapper {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-bottom: 60px;
+}
+
+.catalog-item-price {
+	display: inline-block;
+	background-color: #e5e5e5;
+	padding: 10px 34px 10px 36px;
+}
+
+.catalog-item-buying {
+	padding: 15px 17px 15px 19px;
+}
+
+.catalog-item-features_title {
+	padding: 0;
+	margin: 0;
+	margin-bottom: 28px;
+	font-size: 24px;
+	line-height: 30px;
+}
+
+.catalog-item-features_list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.catalog-item-features_item {
+	position: relative;
+	padding-left: 20px;
+}
+
+.catalog-item-features_item:before {
+	content: "";
+	position: absolute;
+	width: 7px;
+	height: 7px;
+	background-color: #000000;
+	transform: rotate(45deg);
+	left: 2px;
+	top: 8px;
+}
+
+/*	Конец основного блок товара "Набор для путешествий" */
+
+/*	Начало блока каталога средств для ухода*/
+
+.care_products .catalog-wrapper {
+	padding-bottom: 48px;
+}
+
+.care_products-wrapper {
+	display: flex;
+	justify-content: space-between;
+}
+
+.care_products .catalog-breadcrumbs-list {
+	margin-bottom: 46px;
+}
+
+.catalog-sort-form {
+	width: 220px
+}
+
+.catalog-sort-form h3 {
+	padding: 0;
+	margin: 0;
+	font-size: 24px;
+	line-height: 30px;
+	margin-bottom: 19px;
+}
+
+.sort-manufacturers-wrapper {
+	margin-bottom: 41px;
+}
+
+.sort-manufacturers-wrapper label {
+	display: block;
+	padding: 6px 0 7px;
+	padding-left: 43px;
+	position: relative;
+}
+
+.sort-manufacturers-wrapper label::after {
+	content: "";
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	box-sizing: border-box;
+	border: 2px solid #000000;
+	left: 0;
+	top: 9px;
+}
+
+#sort-manufacturers-1:checked ~ .sort-manufacturers-wrapper label[for='sort-manufacturers-1']::after,
+#sort-manufacturers-2:checked ~ .sort-manufacturers-wrapper label[for='sort-manufacturers-2']::after,
+#sort-manufacturers-3:checked ~ .sort-manufacturers-wrapper label[for='sort-manufacturers-3']::after,
+#sort-manufacturers-4:checked ~ .sort-manufacturers-wrapper label[for='sort-manufacturers-4']::after,
+#sort-manufacturers-5:checked ~ .sort-manufacturers-wrapper label[for='sort-manufacturers-5']::after,
+#sort-manufacturers-6:checked ~ .sort-manufacturers-wrapper label[for='sort-manufacturers-6']::after {
+	background-image: url("../img/png/checkbox-icon.png");
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.sort-group-wrapper {
+	margin-bottom: 42px;
+}
+
+.sort-group-wrapper label {
+	display: block;
+	line-height: 18px;
+	padding: 10px 1px 9px;
+	padding-left: 43px;
+	position: relative;
+}
+
+.sort-group-wrapper label::after {
+	content: "";
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	box-sizing: border-box;
+	border: 2px solid #000000;
+	border-radius: 50%;
+	left: 0;
+	top: 9px;
+}
+
+#sort-group-1:checked ~ .sort-group-wrapper label[for='sort-group-1']::after,
+#sort-group-2:checked ~ .sort-group-wrapper label[for='sort-group-2']::after,
+#sort-group-3:checked ~ .sort-group-wrapper label[for='sort-group-3']::after {
+	background-image: url("../img/png/radio-icon.png");
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.sort-products-apply {
+	padding: 15px 25px 15px 32px;
+}
+
+.catalog-products-block {
+	width: 700px;
+}
+
+.catalog-products-list {
+	padding: 0;
+	padding-top: 5px;
+	margin: 0;
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-bottom: 24px;
+}
+
+.catalog-products-item {
+	width: 220px;
+	background-color: #ffffff;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.2);
+	text-transform: none;
+	padding-bottom: 15px;
+	margin-bottom: 20px;
+}
+
+.catalog-products-item:hover {
+	box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
+}
+
+.catalog-products-image {
+	margin: 0;
+	margin-bottom: 7px;
+	padding: 0;
+}
+
+.catalog-products-title {
+	margin: 0;
+	padding: 0;
+	padding-left: 16px;
+	line-height: 18px;
+	margin-bottom: 13px;
+	color: #000000;
+}
+
+.catalog-products-title a {
+	color: #000000;
+}
+
+.catalog-products-title span {
+	display: block;
+	text-transform: uppercase;
+	line-height: 18px;
+}
+
+.catalog-products-block .catalog-item-price_wrapper {
+	margin-bottom: 0;
+	justify-content: center;
+	width: 100%;
+	flex-wrap: wrap;
+}
+
+.products-pages-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.products-pages-item {
+	display: inline-block;
+	margin-right: 4px;
+	padding: 15px 18px;
+}
+
+.products-pages-item.current {
+	background-color: #ffffff;
+	color: #000000;
+	cursor: default;
+}
+
+.products-pages-link {
+	color: #ffffff;
+}
+
+
+
+
+
+
+
+
