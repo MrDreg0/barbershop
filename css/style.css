@@ -668,7 +668,7 @@ background-color: #663d15;
 .popup-map {
 	display: none;
 	position: fixed;
-	top: 150px;
+	top: 100px;
 	left: 50%;
 	margin-left: -390px;
 	border: 7px solid #ffffff;
